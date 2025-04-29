@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 10px 20px;
+    transition: background-color 0.5s ease;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 80vh;
+    padding: 20px;
+}
+
+.header h1{
+    margin: 20px 0;
+    color: transparent;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+}
+
+div.colorContainer{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+button{
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+#colorButton1{
+    background-color: green; 
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 6px #999;
+    border-radius: 15px;
+}
+#colorButton1:active{
+    background-color: rgb(15, 148, 15);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+    border-radius: 18px;
+}
+#colorButton2{
+    background-color: red; 
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 6px #999;
+    border-radius: 15px;
+}
+#colorButton2:active{
+    background-color: rgb(230, 18, 18);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+
+}
+#colorButton3{
+    background-color: blue; 
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 6px #999;
+    border-radius: 15px;
+}
+#colorButton3:active{
+    background-color: rgb(65, 65, 248);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+#colorButton4{
+    background-color: yellow; 
+    color: black;
+    font-size: 20px;
+    box-shadow: 0 6px #999;
+    border-radius: 15px;
+}
+#colorButton4:active{
+    background-color: rgb(236, 236, 26);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+#colorButton5{
+    background-color: rgb(204, 197, 197); 
+    color: black;
+    font-size: 20px;   
+    box-shadow: 0 6px #999;
+    border-radius: 15px;
+}
+#colorButton5:active{
+    background-color: rgb(236, 226, 226);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
