@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-list-check"></i> To-Do List</h1>
+    </header>
+    <main>
+        <h2>Tasks for the Day...!</h2>
+        <section class="todo-app">
+            <input type="text" id="new-task" placeholder="Add a new task..." />
+            <button id="add-task" onclick="addfn()">Add +</button>
+            <ul id="task-list">
+                <!-- <li>
+                    List Item 1
+                    <button id ="delete-task" onclick="deletefn(this)"><i class="fas fa-trash"></i></button>
+                </li> -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 To-Do List App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

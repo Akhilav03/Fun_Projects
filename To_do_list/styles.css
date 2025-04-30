@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative;
+    z-index: 0;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Images/paper.jpg') no-repeat center;
+    background-size: cover;
+    opacity: 0.5; 
+    z-index: -2;
+    pointer-events: none;
+  }
+  
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: url('Images/girl2.png') no-repeat bottom right;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+}
+
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    left: 200px;
+    padding: 10px;
+}
+main > h2{
+    position: relative;
+    left: -100px;
+    padding: 10px;
+    color: #9e7af3;
+}
+
+.todo-app{
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+input[type="text"]{
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 15px;;
+}
+input[type="text"]:focus{
+    border-color: #ac76f3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(162, 102, 240, 0.5);
+}
+button#add-task{
+    padding: 10px 15px;
+    background-color: #9e7af3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px #999;
+    font-weight: bold;
+}
+#add-task:hover, #delete-task:hover{
+    background-color: #be7beb;
+}
+button:active{
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+.delete-task{
+    background-color: #9e7af3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px 8px;
+    margin-left: 10px;
+}
+#task-list{
+    list-style-type: none;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+    width:auto;
+}
+#task-list li{
+    color: #4b2e83;
+    padding: 10px;
+}
+#task-list li::before {
+    content: '🌸';
+    margin-right: 10px;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
