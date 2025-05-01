@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <form id="tipForm">
+        <label for="billAmount">Bill Amount:</label>
+        <input type="number" id="billAmount" placeholder="Enter bill amount" required>
+        <br>
+        <label for="tip">Tip Percentage:</label>
+        <select id="tip" onchange="handleTipChange()">
+            <option value=0.10>10%</option>
+            <option value=0.15>15%</option>
+            <option value=0.20>20%</option>
+            <option value=0.25>25%</option>
+            <option value=0.30>30%</option>
+            <option value=0.40>40%</option>
+            <option value=0.50>50%</option>
+            <option value="custom">Custom</option>
+        </select>
+        <br>
+        <!-- Hidden by default -->
+        <div id="customTipContainer">
+            <label for="customTip">Enter Custom Tip (e.g., 0.18 for 18%):</label>
+            <input type="number" id="customTip" step="0.01" min="0" max="1" placeholder="0.18" />
+            <br><br>
+        </div>
+        <label for="number">Number of people spliting:</label>
+        <input type="number" id="split" placeholder="How many people are splitting the bills" value=1 min="1">
+        <br><br>
+        <button type="button" onclick="calculateTip()">Calculate Tip</button>
+    </form>
+    <div id="result">
+        <h2>Result:</h2>
+        <p id="tipAmount"></p>
+        <p id="totalAmount"></p>
+        <p id="amountPerPerson"> </p>
+    </div>
+</body>
+</html>
